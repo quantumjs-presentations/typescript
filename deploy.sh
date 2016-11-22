@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 exists=`git show-ref refs/heads/gh-pages`
-if ![ -n "$exists" ]; then
+if ! [ -n "$exists" ]; then
     echo 'branch exists!'
     git checkout -b "gh-pages"
 else
