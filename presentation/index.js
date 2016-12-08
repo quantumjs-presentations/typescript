@@ -165,37 +165,34 @@ export default class Presentation extends React.Component {
                 <TableRow>
                   <TableHeaderItem>V1.5</TableHeaderItem>
                   <TableHeaderItem>V1.6</TableHeaderItem>
-                  <TableHeaderItem>V2.1</TableHeaderItem>
+                  <TableHeaderItem>V1.7</TableHeaderItem>
                 </TableRow>
                 </thead>
                 <tbody>
                 <TableRow>
                   <TableItem>ES6 Modules</TableItem>
                   <TableItem>JSX support</TableItem>
-                  <TableItem>Async anywhere</TableItem>
+                  <TableItem>async/await -> es6 target</TableItem>
                 </TableRow>
                 <TableRow>
                   <TableItem>TSConfig</TableItem>
                   <TableItem>Intersection types</TableItem>
-                  <TableItem>Configuration inheritance</TableItem>
+                  <TableItem>this-typing</TableItem> {/*resolved to correct type, not just base class*/}
                 </TableRow>
                 <TableRow>
                   <TableItem>Destructuring</TableItem>
                   <TableItem>Local type declarations</TableItem>
-                  <TableItem>Literal types Inference</TableItem>
+                  <TableItem>ES7 ** operator</TableItem>
                 </TableRow>
                 <TableRow>
                   <TableItem>namespace keyword</TableItem>
                   <TableItem>Class expressions </TableItem>
-                  <TableItem></TableItem>
+                  <TableItem>Improved checking for destructuring</TableItem> {/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#improved-checking-for-destructuring-object-literal*/}
                 </TableRow>
                 <TableRow>
                   <TableItem>for..of</TableItem>
                   <TableItem></TableItem>
-
-                  <TableItem></TableItem>
-
-                  <TableItem></TableItem>
+                  <TableItem>Decorator support for ES3</TableItem>
                 </TableRow>
                 <TableRow>
                   <TableItem>Decorators</TableItem>
