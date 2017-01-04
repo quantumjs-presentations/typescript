@@ -40,6 +40,7 @@ require("./custom.css");
 
 const slideTransition = ["slide"];
 const images = mapValues({
+  basicReactTypescript: require("../images/basic-react-typescript.png"),
   logo: require("../images/qi.png"),
   usageStats: require("../images/usage.png"),
   ts: require("../images/ts.png"),
@@ -210,18 +211,109 @@ export default class Presentation extends React.Component {
               </Table>
             </Layout>
           </Slide>
+          <Slide transition={slideTransition}>
+            <Heading caps fit size={1}>
+              More updates
+            </Heading>
+            <Layout>
+              <Table>
+                <thead>
+                <TableRow>
+                  <TableHeaderItem>V1.8</TableHeaderItem>
+                    <TableHeaderItem>V1.8 (cont)</TableHeaderItem>
+                  <TableHeaderItem>V1.7</TableHeaderItem>
+                </TableRow>
+                </thead>
+                <tbody>
+                <TableRow>
+                  <TableItem>Type parameters as constraints</TableItem>{/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#type-parameters-as-constraints*/}
+                  <TableItem>Simplified props type mgt React</TableItem>
+                  <TableItem>async/await -> es6 target</TableItem>
+                </TableRow>
+                <TableRow>
+                  <TableItem>Control flow analysis</TableItem>{/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#control-flow-analysis-errors*/}
+                  <TableItem>Augmenting module scope</TableItem>
+                  <TableItem>this-typing</TableItem> {/*resolved to correct type, not just base class*/}
+                </TableRow>
+                <TableRow>
+                  <TableItem>Stateless Fn Comps React</TableItem>
+                  <TableItem>Local type declarations</TableItem>
+                  <TableItem>ES7 ** operator</TableItem>
+                </TableRow>
+                <TableRow>
+                  <TableItem>Augmenting scope from modules {/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#augmenting-globalmodule-scope-from-modules*/}
+                  </TableItem>{/*Functions with code paths that do not return a value in JS implicitly return undefined*/}
+                  <TableItem>Class expressions </TableItem>
+                  <TableItem>Improved checking for destructuring</TableItem> {/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#improved-checking-for-destructuring-object-literal*/}
+                </TableRow>
+                <TableRow>
+                  <TableItem>String literal types</TableItem>
+                  <TableItem>Class expressions </TableItem>
+                  <TableItem>Improved checking for destructuring</TableItem> {/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#improved-checking-for-destructuring-object-literal*/}
+                </TableRow>
+                <TableRow>
+                  <TableItem>Improved un/int type inference</TableItem>
+                  <TableItem></TableItem>
+                  <TableItem>Decorator support for ES3</TableItem>
+                </TableRow>
+                </tbody>
+              </Table>
+            </Layout>
+          </Slide>
 
 
           <Slide transition={slideTransition}>
             <Heading size={4}>
-              Minimal Demo
+              Example of typing
             </Heading>
+            <p>I use this in my space invaders game</p>
             <CodePane
               lang="jsx"
               source={require("raw!../examples/somets.ts")}
               margin="20px auto"
             />
           </Slide>
+
+          <Slide transition={slideTransition}>
+            <Heading size={4}>
+              Typescript with React
+            </Heading>
+            <h3>minimal project setup part 1</h3>
+            <CodePane
+              lang="sh"
+              source={require("raw!../examples/setup.sh")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide transition={slideTransition}>
+            <h3>minimal project setup part 2</h3>
+            <CodePane
+              lang="json"
+              source={require("raw!../examples/tsconfig.json")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide transition={slideTransition}>
+            <h3>Simple tsx component</h3>
+            <CodePane
+              lang="tsx"
+              source={require("raw!../examples/Hello.tsx")}
+              margin="20px auto"
+            />
+            or
+            <CodePane
+              lang="tsx"
+              source={require("raw!../examples/HelloClassic.tsx")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide transition={slideTransition}>
+            <heading>End result:</heading>
+            <Image src={images.basicReactTypescript} margin="0px auto 40px" height="524px"/>
+          </Slide>
+
+
+
 
           <Slide transition={slideTransition}>
             <Heading size={4}>
@@ -232,7 +324,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={slideTransition}>
             <Link href="https://www.youtube.com/channel/UC0XiDgtbFR8ohoGlstuFgGQ">
-              <Heading size={1}>
+              <Heading size={4}>
                 Quantum Information
               </Heading>
             </Link>
