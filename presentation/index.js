@@ -41,6 +41,7 @@ require("./custom.css");
 const slideTransition = ["slide"];
 const images = mapValues({
   basicReactTypescript: require("../images/basic-react-typescript.png"),
+  basicAngular: require("../images/basic-angular.png"),
   logo: require("../images/qi.png"),
   usageStats: require("../images/usage.png"),
   ts: require("../images/ts.png"),
@@ -221,7 +222,7 @@ export default class Presentation extends React.Component {
                 <TableRow>
                   <TableHeaderItem>V1.8</TableHeaderItem>
                     <TableHeaderItem>V1.8 (cont)</TableHeaderItem>
-                  <TableHeaderItem>V1.7</TableHeaderItem>
+                  <TableHeaderItem>V1.8 (cont)</TableHeaderItem>
                 </TableRow>
                 </thead>
                 <tbody>
@@ -273,6 +274,9 @@ export default class Presentation extends React.Component {
             />
           </Slide>
 
+
+          {/*REACT SECTION*/}
+
           <Slide transition={slideTransition}>
             <Heading size={4}>
               Typescript with React
@@ -313,8 +317,63 @@ export default class Presentation extends React.Component {
           </Slide>
 
 
+          {/*angular SECTION*/}
 
-
+          <Slide transition={slideTransition}>
+            <Heading size={4}>
+              Typescript with Angular 2
+            </Heading>
+            <h3>Creating an app with angular-cli</h3>
+            <CodePane
+              lang="bash"
+              source={require("raw!../examples/angular/setup.sh")}
+              margin="20px auto"
+            />
+            <p>This will create a bunch of files (or update existing project) and then run  <code>npm i</code></p>
+          </Slide>
+          <Slide transition={slideTransition}>
+            <h3>Basic component</h3>
+            <p>app.component.ts</p>
+            <CodePane
+              lang="typescript"
+              source={require("raw!../examples/angular/app.component.ts")}
+              margin="20px auto"
+            />
+            <p>app.component.html</p>
+            <CodePane
+              lang="html"
+              source={require("raw!../examples/angular/app.component.html")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide transition={slideTransition}>
+            <h3>Using the component in an Angular2 app (@NgModule)</h3>
+            <CodePane
+              lang="typescript"
+              source={require("raw!../examples/angular/app.module.ts")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide transition={slideTransition}>
+            <h3>Bootstrapping the module</h3>
+            <CodePane
+              lang="typescript"
+              source={require("raw!../examples/angular/main.ts")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide transition={slideTransition}>
+            <h3>angular-cli ties all this together</h3>
+            <CodePane
+              lang="js"
+              source={require("raw!../examples/angular/angular-cli.json")}
+              margin="20px auto"
+            />
+          </Slide>
+          <Slide transition={slideTransition}>
+            <heading>End result:</heading>
+            <Image src={images.basicAngular} margin="0px auto 40px" height="524px"/>
+          </Slide>
           <Slide transition={slideTransition}>
             <Heading size={4}>
               Gotchas
