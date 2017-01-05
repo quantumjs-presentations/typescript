@@ -228,33 +228,32 @@ export default class Presentation extends React.Component {
                 <TableRow>
                   <TableItem>Type parameters as constraints</TableItem>{/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#type-parameters-as-constraints*/}
                   <TableItem>Simplified props type mgt React</TableItem>
-                  <TableItem>async/await -> es6 target</TableItem>
+                  <TableItem>this-based type guards</TableItem>
                 </TableRow>
                 <TableRow>
                   <TableItem>Control flow analysis</TableItem>{/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#control-flow-analysis-errors*/}
                   <TableItem>Augmenting module scope</TableItem>
-                  <TableItem>this-typing</TableItem> {/*resolved to correct type, not just base class*/}
+                  <TableItem>Official TypeScript NuGet package</TableItem> {/*resolved to correct type, not just base class*/}
                 </TableRow>
                 <TableRow>
                   <TableItem>Stateless Fn Comps React</TableItem>
-                  <TableItem>Local type declarations</TableItem>
-                  <TableItem>ES7 ** operator</TableItem>
+                  <TableItem>amd + commons concat with --outFile</TableItem>
+                  <TableItem>Prettier error messages</TableItem>
                 </TableRow>
                 <TableRow>
-                  <TableItem>Augmenting scope from modules {/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#augmenting-globalmodule-scope-from-modules*/}
-                  </TableItem>{/*Functions with code paths that do not return a value in JS implicitly return undefined*/}
                   <TableItem>Class expressions </TableItem>
-                  <TableItem>Improved checking for destructuring</TableItem> {/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#improved-checking-for-destructuring-object-literal*/}
+                  <TableItem>Modules emitted with "use strict"</TableItem>
+                  <TableItem>Colorization of JSX code in VS 2015</TableItem>
                 </TableRow>
                 <TableRow>
                   <TableItem>String literal types</TableItem>
-                  <TableItem>Class expressions </TableItem>
-                  <TableItem>Improved checking for destructuring</TableItem> {/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#improved-checking-for-destructuring-object-literal*/}
+                  <TableItem>Including .js --allowJs</TableItem>
+                  <TableItem>(-p) flag any file path</TableItem> {/*https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#improved-checking-for-destructuring-object-literal*/}
                 </TableRow>
                 <TableRow>
                   <TableItem>Improved un/int type inference</TableItem>
-                  <TableItem></TableItem>
-                  <TableItem>Decorator support for ES3</TableItem>
+                  <TableItem>Custom JSX factories</TableItem>
+                  <TableItem> comments in tsconfig.json</TableItem>
                 </TableRow>
                 </tbody>
               </Table>
@@ -268,7 +267,7 @@ export default class Presentation extends React.Component {
             </Heading>
             <p>I use this in my space invaders game</p>
             <CodePane
-              lang="jsx"
+              lang="js"
               source={require("raw!../examples/somets.ts")}
               margin="20px auto"
             />
@@ -280,15 +279,16 @@ export default class Presentation extends React.Component {
             </Heading>
             <h3>minimal project setup part 1</h3>
             <CodePane
-              lang="sh"
+              lang="bash"
               source={require("raw!../examples/setup.sh")}
               margin="20px auto"
             />
           </Slide>
           <Slide transition={slideTransition}>
             <h3>minimal project setup part 2</h3>
+            <p>tsconfig.json</p>
             <CodePane
-              lang="json"
+              lang="js"
               source={require("raw!../examples/tsconfig.json")}
               margin="20px auto"
             />
@@ -296,13 +296,13 @@ export default class Presentation extends React.Component {
           <Slide transition={slideTransition}>
             <h3>Simple tsx component</h3>
             <CodePane
-              lang="tsx"
+              lang="typescript"
               source={require("raw!../examples/Hello.tsx")}
               margin="20px auto"
             />
             or
             <CodePane
-              lang="tsx"
+              lang="typescript"
               source={require("raw!../examples/HelloClassic.tsx")}
               margin="20px auto"
             />
