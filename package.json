@@ -43,6 +43,7 @@
     "is-buffer": "^1.1.1",
     "markdown-loader": "^0.1.7",
     "node-libs-browser": "^2.0.0",
+    "prismjs": "^1.6.0",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.4.4",
     "style-loader": "^0.13.0",

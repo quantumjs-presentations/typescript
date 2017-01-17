@@ -63,7 +63,7 @@ export default class Presentation extends React.Component {
         <Deck transition={slideTransition} transitionDuration={500}>
           <Slide transition={slideTransition} bgColor="secondary">
             <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-              TypeScript in 2016
+              TypeScript in 2017
             </Heading>
             <Image src={images.ts} margin="40px auto" height="324px"/>
           </Slide>
@@ -313,7 +313,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={slideTransition}>
             <heading>End result:</heading>
-            <Image src={images.basicReactTypescript} margin="0px auto 40px" height="524px"/>
+            <Image src={images.basicReactTypescript} margin="0px auto 40px" width="800px"/>
           </Slide>
 
 
@@ -372,15 +372,53 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={slideTransition}>
             <heading>End result:</heading>
-            <Image src={images.basicAngular} margin="0px auto 40px" height="524px"/>
+            <Image src={images.basicAngular} margin="0px auto 40px" width="800px"/>
+          </Slide>
+
+
+          <Slide transition={slideTransition}>
+            <Heading size={4}>
+              Vanilla TypeScript
+            </Heading>
+            <h3>Creating a cross framework component from scratch</h3>
+            <CodePane
+              lang="bash"
+              source={require("raw!../examples/IComponent.ts")}
+              margin="20px auto"
+            />
+            <p><a href="https://github.com/quantumjs/vanilla-typescript">https://github.com/quantumjs/vanilla-typescript</a> </p>
+            <h4>Is this a framework?</h4>
+            <p>Nope, this is just to provide some little level of common sense to the wild west of vanillajs.</p>
           </Slide>
           <Slide transition={slideTransition}>
             <Heading size={4}>
-              Gotchas
+              <a href="https://www.npmjs.com/package/solar-popup">Solar-popup</a>
             </Heading>
-            <Appear><ListItem>To use <code>require(..</code> you need node types: </ListItem></Appear>
-            <Appear><ListItem>Run <code>npm install @types/node --save-dev</code></ListItem></Appear>
+            <CodePane
+              lang="bash"
+              source={require("raw!../examples/SolarPopup.ts")}
+              margin="20px auto"
+            />
           </Slide>
+
+
+          <Slide transition={slideTransition}>
+            <h3>Basic component</h3>
+            <p>app.component.ts</p>
+            <CodePane
+              lang="typescript"
+              source={require("raw!../examples/angular/app.component.ts")}
+              margin="20px auto"
+            />
+            <p>app.component.html</p>
+            <CodePane
+              lang="html"
+              source={require("raw!../examples/angular/app.component.html")}
+              margin="20px auto"
+            />
+          </Slide>
+
+
           <Slide transition={slideTransition}>
             <Link href="https://www.youtube.com/channel/UC0XiDgtbFR8ohoGlstuFgGQ">
               <Heading size={4}>
